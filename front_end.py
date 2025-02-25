@@ -6,8 +6,11 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables from the .env file
-dotenv_path = os.path.join(os.path.dirname(__file__), 'cred.env')
-load_dotenv(dotenv_path)
+#dotenv_path = os.path.join(os.path.dirname(__file__), 'cred.env')
+#load_dotenv(dotenv_path)
+
+# Get connection string from Streamlit Secrets
+conn_str = st.secrets["CONN_STR"]
 
 # Get the connection string
 conn_str = os.getenv("CONN_STR")
