@@ -22,7 +22,7 @@ if not conn_str:
 
 
 # Establish the pyodbc connection
-conn = pyodbc.connect(conn_str)
+conn = pyodbc.connect(conn_str,timeout=30)
 
 # Query the database to get the full dataset
 query = """SELECT f.Date,f.Outlet,f.Predicted_Sales,f.Section, s.Sales as Actual_Sales FROM [Analytics].[dbo].[Pulse_OutletRevenueForecast] f
