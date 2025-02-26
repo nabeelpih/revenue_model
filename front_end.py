@@ -13,7 +13,7 @@ import os
 conn_str = st.secrets["CONN_STR"]
 
 # Get the connection string
-conn_str = os.getenv("CONN_STR")
+#conn_str = os.getenv("CONN_STR")
 
 
 # Ensure the variable is loaded correctly
